@@ -1,0 +1,24 @@
+<div class="container" style="padding: 40px;" >
+    <h2 class="mb-5" style="text-align: center;">Edit Joke</h2>
+<form (ngSubmit)="editJokeButton()">
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input type="text" class="form-control" required [(ngModel)]="joke.id" name="id" disabled >
+  </div>
+
+  <div class="form-group">
+    <label for="value">Joke</label>
+    <input type="text" class="form-control" required [(ngModel)]="joke.value" name="value" >
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <input type="text" class="form-control" required [(ngModel)]="joke.category" name="category" >
+  </div>
+<br>
+  <!-- <button type="button" class="btn btn-success">Submit</button>
+  <button type="button" class="btn btn-primary" (click)="goBackToList()">Go Back</button> -->
+  <button type="submit" class="btn btn-success" style="margin-right:20px;">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="goBackToList()">Go Back</button>
+</form>
+</div>

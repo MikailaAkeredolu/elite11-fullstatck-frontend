@@ -1,0 +1,31 @@
+<div class="container">
+<h1 style="text-align: center;" class="mt-5">Got Jokes?</h1>
+    <div class="mt-5 mb-5" style="text-align: center;">
+        <button type="button" class="btn btn-success"  (click)="goToAddJoke()">Add a Joke</button>
+    </div>
+
+        <div class="table-responsive" style="text-align: center;" >
+            <table class="table" *ngIf="jokes.length">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Joke</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let joke of jokes">
+                        <td>{{joke.id}}</td>
+                        <td>{{joke.value}}</td>
+                        <td>{{joke.category}}</td>
+                            <!-- Todo make buttons clickable -->
+                        <td><button type="button" class="btn btn-primary" (click)="goToEditJoke(joke.id)" >Edit</button></td>
+                        <td><button type="button" class="btn btn-warning"(click)="goToViewJoke(joke.id)">View</button></td>
+                        <td><button type="button" class="btn btn-danger" (click)="deleteJoke(joke.id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+       
+        </div>
+        
+    </div>
